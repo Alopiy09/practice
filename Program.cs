@@ -69,6 +69,15 @@ namespace bangazon
             {
                 Console.WriteLine(products[i]);
             }
+            foreach (string product in products) {
+    if (product.Length < 5) {
+        Console.WriteLine($"{product} has a short name");
+    } else if (product.Length < 10) {
+        Console.WriteLine($"{product} has a medium-sized name");
+    } else {
+        Console.WriteLine($"{product} has a long name");
+    }
+}
         }
     }
 }
