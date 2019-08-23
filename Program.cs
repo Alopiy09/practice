@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace bangazon
 {
@@ -38,7 +39,7 @@ namespace bangazon
     This may seem redundant, but it's part of the C# language compiler's
     type checking constraints.
 */
-List<string> products = new List<string>() {
+            List<string> products = new List<string>() {
     "Motorcycle",
     "Sofa",
     "Sandals",
@@ -46,26 +47,28 @@ List<string> products = new List<string>() {
     "iPhone"
 };
 
-/*
-    A foreach loop is used to iterate over a collection.
+            /*
+                A foreach loop is used to iterate over a collection.
 
-    The code below is roughly equivalent to the following JavaScript:
-    products.forEach(product => {
-        console.log(product);
-    });
-*/
-foreach (string product in products) {
-    Console.WriteLine(product);
-}
+                The code below is roughly equivalent to the following JavaScript:
+                products.forEach(product => {
+                    console.log(product);
+                });
+            */
+            foreach (string product in products)
+            {
+                Console.WriteLine(product);
+            }
 
-/*
-    Like JavaScript, C# has a for() loop
+            /*
+                Like JavaScript, C# has a for() loop
 
-    This code is equivalent to the foreach loop above.
-*/
-for (int i=0; i<products.Count; i++) {
-    Console.WriteLine(products[i]);
-}
+                This code is equivalent to the foreach loop above.
+            */
+            for (int i = 0; i < products.Count; i++)
+            {
+                Console.WriteLine(products[i]);
+            }
         }
     }
 }
